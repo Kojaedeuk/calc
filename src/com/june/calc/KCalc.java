@@ -17,9 +17,8 @@ import java.util.HashMap;
  * map.setDouble("B", 5.0);
  * //계산식 세팅   
  * String formula = "A * ( B + 11 ) / 3";
- * Parse parse = Calculator.parse(formula);
  * //계산실행
- * BigDecimal result = (BigDecimal)parse.calculation(map);
+ * BigDecimal result = (BigDecimal) KCalc.calculate(map, formula);
  * 
  * //결과 예시
  * X = A * ( B + 11 ) / 3 = [10.67] 
