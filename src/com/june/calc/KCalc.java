@@ -84,6 +84,7 @@ public class KCalc
      */
     public synchronized static Object calculate( HashMap<String, Object> map, String formula ) 
     {
+    	KCalc calc = getInstance();
     	BigDecimal result = BigDecimal.ZERO;
 		if(instance == null) {
 			instance = new Calculator();
@@ -103,7 +104,7 @@ public class KCalc
     	}
     	
     	result = (BigDecimal)parse.calculation(map);
-    	getInstance().logging(parse.toString(map) + " = [" + result + "]");
+    	calc.logging(parse.toString(map) + " = [" + result + "]");
     	
         return result;
     }
