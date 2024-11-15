@@ -38,16 +38,13 @@ public class KCalc
 	
 	/**
 	 * 싱글톤 객체 선언
-	 * kCalc
 	 */
 	private static KCalc kCalc;
 	
     /**
      * 계산식과 처리 결과를 logging 할지 여부
-     * boolean
-     * isLogging
      */
-    private boolean isLogging; //logging 여부
+    private static boolean isLogging; //logging 여부
 
 	private volatile static Calculator instance = new Calculator();
 	
@@ -57,22 +54,11 @@ public class KCalc
 	private KCalc()
 	{
 		super();
-		this.isLogging = Constant.IS_LOGGING;
-	}
-	
-	/**
-	 * KCalc 참조값 반환
-	 * 
-	 * @return KCalc
-	 */
-	public static KCalc getInstance()
-	{
 		if(null == kCalc)
 		{
 			kCalc = new KCalc();
 		}
-		
-		return kCalc;
+		isLogging = Constant.IS_LOGGING;
 	}
 	
     /**
@@ -84,7 +70,6 @@ public class KCalc
      */
     public synchronized static Object calculate( HashMap<String, Object> map, String formula ) 
     {
-    	KCalc calc = getInstance();
     	BigDecimal result = BigDecimal.ZERO;
 		if(instance == null) {
 			instance = new Calculator();
@@ -102,7 +87,7 @@ public class KCalc
     	}
     	
     	result = (BigDecimal)parse.calculation(map);
-    	calc.logging(parse.toString(map) + " = [" + result + "]");
+    	logging(parse.toString(map) + " = [" + result + "]");
     	
         return result;
     }
@@ -141,20 +126,30 @@ public class KCalc
 	 * 
 	 * @param str 입력 문자열
 	 */
-	private void logging(String str)
+	private static void logging(String str)
 	{
 		if(isLogging())
 			System.out.println(str);
 	}
 
 	/**
-	 * 로깅 여부
+	 * 로깅 여부 반환
 	 * 
-	 * @return the isLogging
+	 * @return 로깅 여부
 	 */
-	public boolean isLogging()
+	public static boolean isLogging()
 	{
 		return isLogging;
+	}
+	
+	/**
+	 * 로깅 여부 세팅
+	 * 
+	 * @param inIsLogging 로깅 여부
+	 */
+	public static void setLogging(boolean inIsLogging)
+	{
+		isLogging = inIsLogging;
 	}
 
 }
