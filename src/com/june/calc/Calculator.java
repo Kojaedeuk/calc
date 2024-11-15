@@ -582,7 +582,8 @@ public class Calculator
             break;
             
         case Constant.VARIABLE: //변수
-        	left = (null == this.getMap().get(vo.getToken())) ? new DefaultValue(new FormulaHandler()) : new DefaultValue(new FormulaHandler(Constant.VARIABLE, vo.getToken()));
+//        	left = (null == this.getMap().get(vo.getToken())) ? new DefaultValue(new FormulaHandler()) : new DefaultValue(new FormulaHandler(Constant.VARIABLE, vo.getToken()));
+        	left = new DefaultValue(new FormulaHandler(Constant.VARIABLE, vo.getToken()));
             getToken(vo);
             
             break;

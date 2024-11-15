@@ -90,8 +90,6 @@ public class KCalc
 			instance = new Calculator();
 		}
 		
-		instance.setMap(map);
-
 		Parse parse = null;
     	if(!cache.containsKey(formula))
     	{
