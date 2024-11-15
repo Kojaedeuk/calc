@@ -54,11 +54,21 @@ public class KCalc
 	private KCalc()
 	{
 		super();
+
+		isLogging = Constant.IS_LOGGING;
+	}
+	
+	/**
+	 * 인스턴스 얻기
+	 * @return KCalc
+	 */
+	public static KCalc getInstance()
+	{
 		if(null == kCalc)
 		{
 			kCalc = new KCalc();
 		}
-		isLogging = Constant.IS_LOGGING;
+		return kCalc;
 	}
 	
     /**
@@ -70,6 +80,8 @@ public class KCalc
      */
     public synchronized static Object calculate( HashMap<String, Object> map, String formula ) 
     {
+    	KCalc.getInstance();
+
     	BigDecimal result = BigDecimal.ZERO;
 		if(instance == null) {
 			instance = new Calculator();
