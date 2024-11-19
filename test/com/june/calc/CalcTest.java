@@ -10,6 +10,7 @@ class CalcTest {
 	@Test
 	void test()
 	{
+		KCalc.setDebugging(false);
 		KCalc.setLogging(true);
 		// 파라메타 세팅을 위한 map 선언
 		HashMap<String, Object> map = new HashMap<>();
@@ -17,10 +18,16 @@ class CalcTest {
 		map.put("B", new BigDecimal(5));
 		// 계산식 세팅
 		String formula = "A == 'A001' && B == 5";
-		// 계산실행
-		BigDecimal result = (BigDecimal) KCalc.calculate(map, formula);
-
-		System.out.println("result:"+result);
+		System.out.println("result:"+KCalc.calculate(map, formula)); // 계산실행
+		formula = "LOG(e, 10)";
+		System.out.println("result:"+KCalc.calculate(map, formula)); // 계산실행
+		formula = "LARGE(10,20) + SMALL(2, 4)";
+		System.out.println("result:"+KCalc.calculate(map, formula)); // 계산실행
+		formula = "ABS(-10)";
+		System.out.println("result:"+KCalc.calculate(map, formula)); // 계산실행
+		formula = "ROUND(0.123456, 2)";
+		System.out.println("result:"+KCalc.calculate(map, formula)); // 계산실행
+		formula = "COS(30/180*PI)";
+		System.out.println("result:"+KCalc.calculate(map, formula)); // 계산실행
 	}
-
 }

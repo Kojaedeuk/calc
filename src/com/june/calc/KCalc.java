@@ -1,6 +1,5 @@
 package com.june.calc;
 
-import java.math.BigDecimal;
 import java.util.HashMap;
 
 /**
@@ -81,8 +80,10 @@ public class KCalc
     public synchronized static Object calculate( HashMap<String, Object> map, String formula ) 
     {
     	KCalc.getInstance();
+    	map.put("e", Constant.E);
+    	map.put("PI", Constant.PI);
 
-    	BigDecimal result = BigDecimal.ZERO;
+    	Object result = null;
 		if(instance == null) {
 			instance = new Calculator();
 		}
@@ -97,8 +98,8 @@ public class KCalc
     	{
     		parse = cache.get(formula);
     	}
-    	
-    	result = (BigDecimal)parse.calculation(map);
+
+    	result = parse.calculation(map);
     	logging(parse.toString(map) + " = [" + result + "]");
     	
         return result;

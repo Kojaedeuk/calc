@@ -540,7 +540,7 @@ public class Calculator
     	
         Parse left  = new DefaultValue(); //좌측 
         
-    	getToken(vo); //sin, cos, tan
+    	getToken(vo); //abs
     	left = exponent(vo); //(
     	left = new Absolute(left);
     	
@@ -771,7 +771,7 @@ public class Calculator
 			vo.setType(Constant.DELIMITER);
 		} else if (Character.isLetter(vo.getExpression().charAt(vo.getIndex()))) { // is variable
 			next(vo);
-			if (Constant.KEYWORD == vo.getType()) {
+			if (Constant.KEYWORD == vo.getLexeme().getType()) {
 				vo.setType(Constant.KEYWORD);
 			} else {
 				vo.setType(Constant.VARIABLE);
