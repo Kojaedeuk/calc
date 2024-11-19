@@ -85,3 +85,11 @@ ex) ABS(-10)
 
 => 10
 
+- 반올림 : ROUND(값, 자릿수), ROUND_UP(값, 자릿수), ROUND_DOWN(값, 자릿수)
+
+ex) ROUND(0.123456, 2)+ROUND_UP(0.123456, 2)+ROUND_DOWN(0.123456, 2)
+
+=> 0.37
+
+- 삼각 함수 : SIN(radian),COS(radian), TAN(radian)
+  라디안(radian)을 단위로 하는 호도법 사용(PI : 3.141592653589793)
