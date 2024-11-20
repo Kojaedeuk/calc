@@ -1,7 +1,7 @@
 /**------------------------------------------------------------------------------
  * PROJ : JUNE PROJECT
- * NAME : com.june.calc.Calculator.java
- * DESC : Automated Calculator Project
+ * NAME : com.june.calc Calculator.java
+ * DESC : Natural language processing computational engine Project
  * VER  : v2.0
  * Copyright 2000 JUNE All rights reserved
  *------------------------------------------------------------------------------
@@ -12,10 +12,8 @@ import java.util.HashMap;
 
 /**
  * 계산식을 파싱한다
- * 
- * @author JUNE
  */
-public class Calculator
+class Calculator
 {
     private int   scale; //소수자리수
     private boolean isDebugging; //debugging 여부
@@ -24,7 +22,7 @@ public class Calculator
 	/**
 	 * 생성자
 	 */
-    public Calculator()
+    Calculator()
 	{
 		this(Constant.SCALE, Constant.IS_DEBUGGING);
 	}
@@ -35,7 +33,7 @@ public class Calculator
 	 * @param scale 반올림자리수
 	 * @param debugging debugging 여부
 	 */
-    public Calculator(int scale, boolean debugging)
+    Calculator(int scale, boolean debugging)
 	{
 		super();
 		setScale(scale);
@@ -47,7 +45,7 @@ public class Calculator
      * @param formula 계산식
      * @return 파싱 결과 반환
      */
-    public Parse parse(String formula)
+    Parse parse(String formula)
     {
     	Parse left  = new DefaultValue(); //좌측 
     	
@@ -74,7 +72,7 @@ public class Calculator
      *
      * @param map HashMap
      */
-    public void setMap( HashMap<String, Object> map )
+    void setMap( HashMap<String, Object> map )
     {
         this.map = map;
     }
@@ -84,7 +82,7 @@ public class Calculator
      *
      * @return HashMap 
      */
-    public HashMap<String, Object> getMap() {
+    HashMap<String, Object> getMap() {
         return map;
     }
 
@@ -93,7 +91,7 @@ public class Calculator
 	 * 
 	 * @return 소수점 자리수 반환
 	 */
-	public int getScale()
+	int getScale()
 	{
 		return scale;
 	}
@@ -103,7 +101,7 @@ public class Calculator
 	 * 
 	 * @param scale 소수점 자리수 세팅
 	 */
-	public void setScale(int scale)
+	void setScale(int scale)
 	{
 		this.scale = scale;
 	}
@@ -113,7 +111,7 @@ public class Calculator
 	 * 
 	 * @return Debugging 여부
 	 */
-	public boolean isDebugging() {
+	boolean isDebugging() {
 		return isDebugging;
 	}
 
@@ -122,7 +120,7 @@ public class Calculator
 	 * 
 	 * @param isDebugging 디버깅 여부
 	 */
-	public void setDebugging(boolean isDebugging) {
+	void setDebugging(boolean isDebugging) {
 		this.isDebugging = isDebugging;
 	}
 

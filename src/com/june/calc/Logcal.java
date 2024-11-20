@@ -1,7 +1,7 @@
 /**------------------------------------------------------------------------------
  * PROJ : JUNE PROJECT
- * NAME : com.june.calc.operator Logcal.java
- * DESC : Automated Calculator Project
+ * NAME : com.june.calc Logcal.java
+ * DESC : Natural language processing computational engine Project
  * VER  : v2.0
  * Copyright 2000 JUNE All rights reserved
  *------------------------------------------------------------------------------
@@ -13,7 +13,6 @@ import java.util.HashMap;
 
 /**
  * 논리 연산
- * @author JUNE
  */
 class Logcal extends AbstractParse
 {

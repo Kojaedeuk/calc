@@ -1,7 +1,7 @@
 /**------------------------------------------------------------------------------
  * PROJ : JUNE PROJECT
- * NAME : com.june.calc.operator TernaryOperation.java
- * DESC : Automated Calculator Project
+ * NAME : com.june.calc Trigonometric.java
+ * DESC : Natural language processing computational engine Project
  * VER  : v2.0
  * Copyright 2000 JUNE All rights reserved
  *------------------------------------------------------------------------------

@@ -1,3 +1,11 @@
+/**------------------------------------------------------------------------------
+ * PROJ : JUNE PROJECT
+ * NAME : com.june.calc KCalc.java
+ * DESC : Natural language processing computational engine Project
+ * VER  : v2.0
+ * Copyright 2000 JUNE All rights reserved
+ *------------------------------------------------------------------------------
+ */
 package com.june.calc;
 
 import java.util.HashMap;
@@ -22,7 +30,6 @@ import java.util.HashMap;
  * //결과 예시
  * X = A * ( B + 11 ) / 3 = [10.67] 
  *</pre>
- * @author 고재득
  * @version 1.0, 2013. 3. 20.
  * @see "계산기를 선언하고 실행하는 곳입니다."
  */

@@ -1,10 +1,10 @@
 /**
  *------------------------------------------------------------------------------
  * PROJ : JUNE PROJECT
- * DESC : Automated Calculator Project
+ * NAME : com.june.calc Lexemes.java
+ * DESC : Natural language processing computational engine Project
  * VER  : v1.0
- * Copyright(c) JUNE All rights reserved
- * 2024-08-30
+ * Copyright 2000 JUNE All rights reserved
  *------------------------------------------------------------------------------
  */
 package com.june.calc;
@@ -17,13 +17,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Description : 어휘항목을 정의 합니다. 
- * &#64;since : 2024. 8. 30.
- * @author : JUNE
- * History : 
- * date : 2024. 8. 30. 
- * user : JUNE 
- * comment : 최초작성
+ * 어휘항목을 정의 합니다. 
  */
 public enum Lexemes {
 	// 산술 연산자 : +, -, *, /, \

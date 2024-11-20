@@ -1,7 +1,7 @@
 /**------------------------------------------------------------------------------
  * PROJ : JUNE PROJECT
- * NAME : com.june.calc.operator TernaryOperation.java
- * DESC : Automated Calculator Project
+ * NAME : com.june.calc Multiply.java
+ * DESC : Natural language processing computational engine Project
  * VER  : v2.0
  * Copyright 2000 JUNE All rights reserved
  *------------------------------------------------------------------------------
@@ -12,8 +12,6 @@ import java.util.HashMap;
 
 /**
  * 곱하기
- * @author 고재득
- *
  */
 class Multiply extends AbstractParse
 {

@@ -1,7 +1,7 @@
 /**------------------------------------------------------------------------------
  * PROJ : JUNE PROJECT
- * NAME : com.june.calc.operator TernaryOperation.java
- * DESC : Automated Calculator Project
+ * NAME : com.june.calc Percent.java
+ * DESC : Natural language processing computational engine Project
  * VER  : v2.0
  * Copyright 2000 JUNE All rights reserved
  *------------------------------------------------------------------------------
@@ -14,7 +14,6 @@ import java.util.HashMap;
 
 /**
  * 백분율(百分率, 문화어: 백분률) 또는 퍼센트(percent)는 수를 100과의 비로 나타내는 방법이다. 
- * @author goyeongjun
  *
  */
 class Percent extends AbstractParse
