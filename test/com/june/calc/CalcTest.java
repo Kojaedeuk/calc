@@ -1,3 +1,11 @@
+/**------------------------------------------------------------------------------
+ * PROJ : JUNE PROJECT
+ * NAME : com.june.calc CalcTest.java
+ * DESC : Rule system engine Project
+ * VER  : v2.0
+ * Copyright 2000 JUNE All rights reserved
+ *------------------------------------------------------------------------------
+ */
 package com.june.calc;
 
 import java.math.BigDecimal;
