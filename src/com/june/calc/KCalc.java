@@ -41,41 +41,14 @@ public class KCalc
 	 * cache
 	 */
 	private final static HashMap<String, Parse> cache = new HashMap<String, Parse>(); //formula
-	
-	/**
-	 * 싱글톤 객체 선언
-	 */
-	private static KCalc kCalc;
-	
     /**
      * 계산식과 처리 결과를 logging 할지 여부
      */
-    private static boolean isLogging; //logging 여부
-
+    private static boolean IS_LOGGING = Constant.IS_LOGGING; //logging 여부
+	/**
+	 * 계산기 선언
+	 */
 	private volatile static Calculator instance = new Calculator();
-	
-	/**
-	 * 생성자
-	 */
-	private KCalc()
-	{
-		super();
-
-		isLogging = Constant.IS_LOGGING;
-	}
-	
-	/**
-	 * 인스턴스 얻기
-	 * @return KCalc
-	 */
-	public static KCalc getInstance()
-	{
-		if(null == kCalc)
-		{
-			kCalc = new KCalc();
-		}
-		return kCalc;
-	}
 	
     /**
      * 계산하다
@@ -86,7 +59,6 @@ public class KCalc
      */
     public synchronized static Object calculate( HashMap<String, Object> map, String formula ) 
     {
-    	KCalc.getInstance();
     	map.put("e", Constant.E);
     	map.put("PI", Constant.PI);
 
@@ -111,7 +83,6 @@ public class KCalc
     	
         return result;
     }
-
 	
     /**
      * 케시 지우기
@@ -159,7 +130,7 @@ public class KCalc
 	 */
 	public static boolean isLogging()
 	{
-		return isLogging;
+		return IS_LOGGING;
 	}
 	
 	/**
@@ -169,7 +140,7 @@ public class KCalc
 	 */
 	public static void setLogging(boolean inIsLogging)
 	{
-		isLogging = inIsLogging;
+		IS_LOGGING = inIsLogging;
 	}
 
 }
