@@ -166,9 +166,7 @@ class Calculator
     	
         Parse left  = new DefaultValue(); //좌측 
         Parse right = new DefaultValue(); //우측 
-        
         left = relational(vo);
-    	
     	if(vo.getLexeme() == Lexemes.EOL)
     	{
     		return left;
@@ -618,7 +616,10 @@ class Calculator
         	
         case Constant.RELATIONAL: //관계연산
         	break;
-        	
+
+        case Constant.LOGICAL: //논리연산
+        	break;
+
         case Constant.DELIMITER: //구분자
         	break;
         	
@@ -783,45 +784,6 @@ class Calculator
 	}
 
 	/**
-	 * isDelim 설명 : 부호 인지 여부 체크
-	 *
-	 * @param c
-	 * @return 파싱 결과
-	 */
-	private boolean isDelim(char c) {
-		switch (c) {
-		case ' ':
-			// 산술 연산자
-		case '+':
-		case '*':
-		case '/':
-		case '%':
-		case '-':
-			// 최우선 연산자
-		case '(':
-		case ')':
-			// 지수 연산자
-		case '^':
-		case '√':
-			// 관계 연산자
-		case '<':
-		case '=':
-		case '>':
-		case '!':
-			// 논리 연산자
-		case '|':
-		case '&':
-			// 삼항 연산자
-		case '?':
-		case ':':
-			// 순차 연산자
-		case ',':
-			return true;
-		}
-		return false;
-	}
-
-	/**
 	 * 입력값의 사이사이에 존재하는 공백을 제거한다.
 	 *
 	 * @param value 입력 문자열
@@ -868,6 +830,45 @@ class Calculator
 				break;
 			}
 		} // end while
+	}
+
+	/**
+	 * isDelim 설명 : 부호 인지 여부 체크
+	 *
+	 * @param c
+	 * @return 파싱 결과
+	 */
+	private boolean isDelim(char c) {
+		switch (c) {
+		case ' ':
+			// 산술 연산자
+		case '+':
+		case '*':
+		case '/':
+		case '%':
+		case '-':
+			// 최우선 연산자
+		case '(':
+		case ')':
+			// 지수 연산자
+		case '^':
+		case '√':
+			// 관계 연산자
+		case '<':
+		case '=':
+		case '>':
+		case '!':
+			// BIT 논리 연산자
+		case '|': //OR 논리합
+		case '&': //AND 논리곱
+			// 삼항 연산자
+		case '?':
+		case ':':
+			// 순차 연산자
+		case ',':
+			return true;
+		}
+		return false;
 	}
 
 }

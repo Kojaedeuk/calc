@@ -25,7 +25,10 @@ class CalcTest {
 		map.put("A", "A001");
 		map.put("B", new BigDecimal(5));
 		// 계산식 세팅
-		String formula = "A == 'A001' && B == 5";
+		String formula = "";
+		formula = "A == 'A001' && B == 5";
+		System.out.println("result:"+KCalc.calculate(map, formula)); // 계산실행
+		formula = "1 > 2 || 3 < 4";
 		System.out.println("result:"+KCalc.calculate(map, formula)); // 계산실행
 		formula = "LOG(e, 10)";
 		System.out.println("result:"+KCalc.calculate(map, formula)); // 계산실행
