@@ -43,5 +43,4 @@ interface Constant
 	String M003 = "Division by Zero"; // 0으로 나누기
 	String M004 = "Unbalanced Parentheses"; //불균형 괄호
 	String M005 = "Can't have more than 255 arguments.";
-	String M006 = "Only 16, 8, and 2 bits are available."; //16, 8, 2비트 만 사용 가능 합니다.
 }
